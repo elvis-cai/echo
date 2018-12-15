@@ -9,7 +9,7 @@ metadata:
     heritage: {{ .Release.Service }}
   annotations:
     strategy.spinnaker.io/max-version-history: '2'
-    traffic.spinnaker.io/load-balancers: '["service my-service"]'
+    traffic.spinnaker.io/load-balancers: '["service your-service"]'
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
