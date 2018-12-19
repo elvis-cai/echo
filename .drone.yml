@@ -1,0 +1,19 @@
+pipeline:
+  build:
+    image: ubuntu
+    commands:
+      - echo "this is a pr"
+      - printenv
+    when:
+      event: [pull_request]
+
+  trigger-test:
+    when:
+      branch:
+        - master
+        - feature/*
+    image: registry.airwallex.com/alpine-curl:latest
+    pull: true
+    commands:
+      - echo "this will run each time"
+      - printenv
