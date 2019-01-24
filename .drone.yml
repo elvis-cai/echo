@@ -18,8 +18,7 @@ pipeline:
       - echo "this will run each time"
       - printenv
   run:
-    image: ubuntu
+    image: docker:git
     commands:
-      - apt-get update && apt-get install -y git
       - echo "my=$$(git describe)" > abc
       - cat abc
