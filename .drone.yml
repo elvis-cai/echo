@@ -19,6 +19,8 @@ pipeline:
       - printenv
   run:
     image: docker:git
+    tags: true
     commands:
+      - git p
       - echo "my=$$(git describe)" > abc
       - cat abc
