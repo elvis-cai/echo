@@ -1,3 +1,8 @@
+clone:
+  git:
+    image: plugins/git
+    tags: true
+
 pipeline:
   build:
     image: ubuntu
@@ -19,7 +24,6 @@ pipeline:
       - printenv
   run:
     image: docker:git
-    tags: true
     commands:
       - echo "my=$$(git describe)" > abc
       - cat abc
