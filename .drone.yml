@@ -20,6 +20,6 @@ pipeline:
   run:
     image: ubuntu
     environment:
-      - MY=$(hostname)
+      - MY=$(echo 1)
     commands:
       - echo ${MY}
