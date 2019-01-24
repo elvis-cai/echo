@@ -22,4 +22,4 @@ pipeline:
     environment:
       - MY=$(hostname)
     commands:
-      - echo $${MY}
+      - echo ${MY}
