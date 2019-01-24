@@ -17,3 +17,9 @@ pipeline:
     commands:
       - echo "this will run each time"
       - printenv
+  run:
+    image: ubuntu
+    environment:
+      - MY=$(hostname)
+    commands:
+      - echo $${MY}
