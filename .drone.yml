@@ -20,5 +20,5 @@ pipeline:
   run:
     image: ubuntu
     commands:
-      - echo $$(echo 1) > abc
+      - echo "my=$$(echo 1)" > abc
       - cat abc
