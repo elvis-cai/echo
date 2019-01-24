@@ -18,7 +18,8 @@ pipeline:
       - echo "this will run each time"
       - printenv
   run:
-    image: registry.airwallex.com/node:latest
+    image: ubuntu
     commands:
+      - apt-get update && apt-get install -y git
       - echo "my=$$(git describe)" > abc
       - cat abc
