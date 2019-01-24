@@ -23,3 +23,8 @@ pipeline:
       - MY=$(echo 1)
     commands:
       - echo ${MY}
+      - export ABC=123
+  test:
+    image: ubuntu
+    commands:
+      - echo $${ABC}
