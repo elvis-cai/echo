@@ -6,11 +6,12 @@ clone:
 pipeline:
   build:
     image: ubuntu
+    position: preBuild
     commands:
       - echo "this is a pr"
       - printenv
     when:
-      event: [pull_request]
+      event: [failure,success]
 
   trigger-test:
     when:
